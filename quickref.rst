@@ -16,7 +16,7 @@ Shell commands
     ls -laF
 
     # Change into your home directory
-    cd ~
+    cd
 
     # Change back into the last directory
     cd -
