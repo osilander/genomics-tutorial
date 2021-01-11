@@ -11,11 +11,11 @@ Install the conda package manager
 
 
 .. Attention::
-   One important aspect of organising files and directories (folders) is `naming convention <https://www.december.com/unix/tutor/filenames.html>`_. When working on the command line, your life will become considerably easier if you avoid using spaces in your files and directory names. Thus, **never** name your file ``my awesome file.txt``. Instead, name it ``my_awesome_file.txt``, or ``MyAwesomeFile.txt`` ("camel case") or ``my-awesome-file.txt``.
+   One important aspect of organising files and directories (folders) is `naming convention <https://en.wikipedia.org/wiki/Naming_convention_(programming)>`_. When working on the command line, your life will become considerably easier if you avoid using spaces in your files and directory names. Thus, **never** name your file ``my awesome file.txt``. Instead, name it ``my_awesome_file.txt`` ("snake case"), or ``myAwesomeFile.txt`` ("camel case") or ``my-awesome-file.txt`` ("kebab case") or ``my.awesome.file.txt`` but probably not ``MY-AWESOME-FILE.txt`` ("screaming snake case"). You should pick one of these at the start of the course, and *stick to that format throughout the course* (i.e. camel case, or kebab case, etc.).
 
 
 .. Attention::
-   While we are the topic of `naming conventions <https://www.december.com/unix/tutor/filenames.html>`_, there are certain characters that you should **always** avoid when naming files and folders. Besides spaces, these are (not necessarily exhaustive): `` : ; ` " ' \ / ! @ # $ % ^ & * ( ) + , ? [ ] { } | > <``. Perhaps the most common that you may be tempted to use are 
+   While we are the topic of `naming conventions <https://en.wikipedia.org/wiki/Naming_convention_(programming)>`_, there are certain characters that you should **always** avoid when naming files and folders. Besides spaces, these are (not necessarily exhaustive): `` : ; ` " ' \ / ! @ # $ % ^ & * ( ) + , ? [ ] { } | > <``. 
   
 
 Software packages and tools are pieces of software that have been developed to perform specific jobs, or are used to implement specific methods. Your general view of a software package may be something like Excel or Chrome or TikTok. However, more fundamentally software is simply a group of instructions used to perform a specific task. In bioinformatics, for example, this could be a set of instructions telling the computer how to interpret and display the quality scores from a ``.fastq`` file.
