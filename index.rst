@@ -5,7 +5,7 @@
 
 .. attention::
 
-   There is a **new revised release**, using data from **E. coli** to speed the analysis steps up. The new tutorial can be accessed at `https://genomics.sschmeier.com/ <https://genomics.sschmeier.com/>`__.
+   This tutorial can be accessed at `https://genomics.sschmeier.com/ <https://genomics.sschmeier.com/>`__.
 
 
 Computational Genomics Tutorial
@@ -15,6 +15,9 @@ This is an introductory tutorial for learning computational genomics mostly on t
 You will learn how to analyse next-generation sequencing (NGS) data.
 The data you will be using is real research data.
 The final aim is to identify genome variations in evolved lines of wild yeast that can explain the observed biological phenotypes.
+
+
+===============================
 Until 2020, `Sebastian <https://www.sschmeier.com>`__ was teaching this material in the Massey University course `Genome Science <https://www.massey.ac.nz/massey/learning/programme-course/course.cfm?course_code=203341>`__.
 
 More information about other bioinformatics material and our past research can be found on the former webpages of the `Schmeier Group <https://www.schmeierlab.com>`__ (`https://www.schmeierlab.com <https://www.schmeierlab.com>`_).
