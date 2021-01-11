@@ -6,9 +6,27 @@ Tool installation
 Install the conda package manager
 ---------------------------------
 
-We will use the package/tool managing system |conda| to install some programs
-that we will use during the course.
-It is not installed by default, thus we need to install it first to be able to use it. 
+.. Attention::
+   Throughout this course you may see commands or files or directories that are named something like ``my_awesome_file.tab`` or ``my_home_directory`` or ``myresults.txt``. In these cases, you should replace these names with names that are **relevant to you**, or which are descriptive **for you**, or which contain **your** directory names. For example, if you are making a file that contains the results of a quality control analysis of DNA sequences from *E. coli*, you might name the file ``ecoli_qc_results.txt``.
+
+
+.. Attention::
+   One important aspect of organising files and directories (folders) is `naming convention <https://www.december.com/unix/tutor/filenames.html>`_. When working on the command line, your life will become considerably easier if you avoid using spaces in your files and directory names. Thus, **never** name your file ``my awesome file.txt``. Instead, name it ``my_awesome_file.txt``, or ``MyAwesomeFile.txt`` ("camel case") or ``my-awesome-file.txt``.
+
+
+.. Attention::
+   While we are the topic of `naming conventions <https://www.december.com/unix/tutor/filenames.html>`_, there are certain characters that you should **always** avoid when naming files and folders. Besides spaces, these are (not necessarily exhaustive): `` : ; ` " ' \ / ! @ # $ % ^ & * ( ) + , ? [ ] { } | > <``. Perhaps the most common that you may be tempted to use are 
+  
+
+Software packages and tools are pieces of software that have been developed to perform specific jobs, or are used to implement specific methods. Your general view of a software package may be something like Excel or Chrome or TikTok. However, more fundamentally software is simply a group of instructions used to perform a specific task. In bioinformatics, for example, this could be a set of instructions telling the computer how to interpret and display the quality scores from a ``.fastq`` file.
+
+
+Software packages and tools often have **dependencies**, which are other pieces of software or tools that are necessary to run the software you would like to install. For example, to use Instagram, you also need software that controls your phone's camera. This reliance of Instagram on camera-controlling software is known as a **dependency**. Software like Instagrtam is designed to be **user-friendly**, and during installation will usually check that such camera-controlling software exists, and if it does not, may try to install it.
+
+However, bioinformatics soaftware, much of which is written by inexperienced computer scientists, or worse, biologists, often does not check for dependencies. This can create signficant issues if ytou try to run a price of software but are missing dependencies (the other pieces of software that are also required).
+
+
+To make sure that we resolve all these dependency issues, we will use the package/tool managing system. This managing system is called |conda|, and it is perhaps the most common package manager used in bioinformatics. |conda| is not installed by default, thus we need to install it first to be able to use it. 
 
 
 .. code-block:: bash
