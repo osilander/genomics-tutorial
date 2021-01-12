@@ -28,13 +28,13 @@ Shell commands
     cd temp
 
     # Quickly show content of a file "temp.txt"
-    # exist the view with "q", navigate line up and down with "k" and "j"
+    # exist the view with "q", navigate line up and down with "k" and "j" and "spacebar"
     less temp.text
 
-    # Show the beginning of a file "temp.txt"
+    # Show the first ten lines of a file "temp.txt"
     head temp.txt
 
-    # Show the end of a file "temp.txt"
+    # Show the last ten lines of a file "temp.txt"
     tail temp.txt
 
 General conda commands

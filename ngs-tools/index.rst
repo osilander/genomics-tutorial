@@ -21,7 +21,7 @@ Preliminaries
 
 .. code-block:: bash
 
-: ; ` " ' \ / ! @ # $ % ^ & * ( ) + , ? [ ] { } | > <. 
+   : ; ` " ' \ / ! @ # $ % ^ & * ( ) + , ? [ ] { } | > <
   
 
 Install the conda package manager
