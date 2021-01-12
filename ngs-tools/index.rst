@@ -39,7 +39,19 @@ While we are the topic of `naming conventions <https://en.wikipedia.org/wiki/Nam
 
 .. Attention::
    And One More Thing
-   Throughout this lab course, *google is your friend*. If you have errors, or if you are not sure how you might do something, or if you forget a command, google it! `It's <https://codeahoy.com/2016/04/30/do-experienced-programmers-use-google-frequently/>`_ `what <https://www.reddit.com/r/programming/comments/3bwo68/how_much_does_an_experienced_programmer_use_google/>`_ `all <https://www.hanselman.com/blog/am-i-really-a-developer-or-just-a-good-googler>`_ `good <https://www.freecodecamp.org/news/google-not-learn-not-why-searching-can-be-better-than-knowing-79838f7a0f06/>`_ `programmers <https://fossbytes.com/do-best-programmers-use-google-stack-overflow-time/>`_ `do <https://news.ycombinator.com/item?id=11603078>`_
+   Throughout this lab course, *google is your friend*. If you have errors, or if you are not sure how you might do something, or if you forget a command, google it!
+
+   `It's <https://codeahoy.com/2016/04/30/do-experienced-programmers-use-google-frequently/>`_
+
+   `what <https://www.reddit.com/r/programming/comments/3bwo68/how_much_does_an_experienced_programmer_use_google/>`_
+
+   `all <https://www.hanselman.com/blog/am-i-really-a-developer-or-just-a-good-googler>`_
+
+   `good <https://www.freecodecamp.org/news/google-not-learn-not-why-searching-can-be-better-than-knowing-79838f7a0f06/>`_
+
+   `programmers <https://fossbytes.com/do-best-programmers-use-google-stack-overflow-time/>`_
+
+   `do <https://news.ycombinator.com/item?id=11603078>`_
 
 Install the conda package manager
 ---------------------------------
