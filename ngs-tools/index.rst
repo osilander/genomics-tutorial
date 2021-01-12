@@ -78,14 +78,14 @@ The installation of this tool is perhaps the most complicated installation we wi
    :doc:`../downloads` page.
 
 
-.. admonition::
+.. Admonition::
    Should the conda installer download fail. Please find links to alternative locations on the
    :doc:`../downloads` page.
 
 
-.. tip::
-   Should the conda installer download fail. Please find links to alternative locations on the
-   :doc:`../downloads` page.
+.. Tip::
+   #. Ask yourself what ``rm`` means in the above command. Why should you be careful when using this command?
+   #. The name ``Miniconda3-latest-Linux-x86_64.sh`` is quite long, will take you a while to type out, and you will br prone to making mistakes when typing it. What should you do instead of typing the full name?
 
     
 Update ``.bashrc`` and ``.zshrc`` config-files
