@@ -24,6 +24,16 @@ Preliminaries
    : ; ` " ' \ / ! @ # $ % ^ & * ( ) + , ? [ ] { } | > <
   
 
+
+.. Attention::
+   Throughout this course we will be interacting with the computer via the command line. There is one fundamental aspect of using the command line that you **must never forget**. It is perhaps the single most powerful method available to save time. That method is...
+   
+
+   **tab-complete**
+   
+
+   Tab-complete can be used to auto-complete commands, directory names, and file names. If you are not sure whether your file is named ``results_QC.txt`` or ``results_qc.txt`` then oin the command line you can simply type ``results`` *and then tab*, and the computer will auto-complete the name (assuming there is a file or directory or command that begins with ``results``).
+
 Install the conda package manager
 ---------------------------------
 
@@ -31,7 +41,7 @@ Install the conda package manager
 Software packages and tools are pieces of software that have been developed to perform specific jobs, or are used to implement specific methods. Your general view of a software package may be something like Excel or Chrome or TikTok. However, more fundamentally software is simply a group of instructions used to perform a specific task. In bioinformatics, for example, this could be a set of instructions telling the computer how to interpret and display the quality scores from a ``.fastq`` file.
 
 
-*However*, software packages and tools often have **dependencies**, which are other pieces of software or tools that are necessary to run the software you would like to install. For example, to use Instagram, you also need software that controls your phone's camera. This reliance of Instagram on camera-controlling software is known as a **dependency**. Software like Instagrtam is designed to be **user-friendly**, and during installation will usually check that such camera-controlling software exists, and if it does not, may try to install it.
+*However*, software packages and tools often have **dependencies**, which are other pieces of software or tools that are necessary to run the software you would like to install. For example, to use Instagram, you also need software that controls your phone's camera. This reliance of Instagram on camera-controlling software is known as a **dependency**. Software like Instagram is designed to be **user-friendly**, and during installation will usually check that such camera-controlling software exists, and if it does not, may try to install it.
 
 Making the matter worse, bioinformatics soaftware, much of which is written by inexperienced computer scientists, or worse, biologists, often does not check for dependencies. This can create signficant issues if you try to run a price of software but are missing dependencies (the other pieces of software that are also required).
 
