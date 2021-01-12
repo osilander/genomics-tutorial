@@ -26,6 +26,8 @@ Preliminaries
 
 
 .. Attention::
+   One More Thing.
+
    Throughout this course we will be interacting with the computer via the command line. There is one fundamental aspect of using the command line that you **must never forget**. It is perhaps the single most powerful method available to save time. That method is...
    
 
