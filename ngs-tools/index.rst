@@ -77,11 +77,13 @@ The installation of this tool is perhaps the most complicated installation we wi
    Should the conda installer download fail. Please find links to alternative locations on the
    :doc:`../downloads` page.
 
-   .. admonition::
+
+.. admonition::
    Should the conda installer download fail. Please find links to alternative locations on the
    :doc:`../downloads` page.
 
-   .. tip::
+
+.. tip::
    Should the conda installer download fail. Please find links to alternative locations on the
    :doc:`../downloads` page.
 
