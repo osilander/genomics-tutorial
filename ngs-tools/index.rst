@@ -16,7 +16,12 @@ Preliminaries
 
 
 .. Attention::
-   While we are the topic of `naming conventions <https://en.wikipedia.org/wiki/Naming_convention_(programming)>`_, there are certain characters that you should **always** avoid when naming files and folders. Besides spaces, these are (not necessarily exhaustive): : ; ` " ' \ / ! @ # $ % ^ & * ( ) + , ? [ ] { } | > <. 
+   While we are the topic of `naming conventions <https://en.wikipedia.org/wiki/Naming_convention_(programming)>`_, there are certain characters that you should **always** avoid when naming files and folders. Besides spaces, these are (not necessarily exhaustive):
+
+
+.. code-block:: bash
+
+: ; ` " ' \ / ! @ # $ % ^ & * ( ) + , ? [ ] { } | > <. 
   
 
 Install the conda package manager
