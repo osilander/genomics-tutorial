@@ -36,6 +36,11 @@ While we are the topic of `naming conventions <https://en.wikipedia.org/wiki/Nam
 
    If you type the first part of a file and then press tab, but find that it does not autocomplete *even though you know you have the correct start of the file name*, then try pressing tab twice. This will give you a list of all the files (directories), etc. that begin with the first few letters that you have typed. This becomes important, for example, if you have a file named ``my_awesome_file.txt`` and ``my_awesome_file2.txt`` but you only type ``my_awes`` and then tab-complete.
 
+
+.. Attention::
+   And One More Thing
+   Throughout this lab course, *google is your friend*. If you have errors, or if you are not sure how you might do something, or if you forget a command, google it! `It's <https://codeahoy.com/2016/04/30/do-experienced-programmers-use-google-frequently/>`_ `what <https://www.reddit.com/r/programming/comments/3bwo68/how_much_does_an_experienced_programmer_use_google/>`_ `all <https://www.hanselman.com/blog/am-i-really-a-developer-or-just-a-good-googler>`_ `good <https://www.freecodecamp.org/news/google-not-learn-not-why-searching-can-be-better-than-knowing-79838f7a0f06/>`_ `programmers <https://fossbytes.com/do-best-programmers-use-google-stack-overflow-time/>`_ `do <https://news.ycombinator.com/item?id=11603078>`_
+
 Install the conda package manager
 ---------------------------------
 
@@ -73,19 +78,14 @@ The installation of this tool is perhaps the most complicated installation we wi
     rm Miniconda3-latest-Linux-x86_64.sh
 
 
+.. Tip::
+   #. Ask yourself what ``rm`` means in the above command. Why should you be careful when using this command?
+   #. The name ``Miniconda3-latest-Linux-x86_64.sh`` is quite long, will take you a while to type out, and you will be prone to making mistakes when typing it. What should you do instead of typing the full name?
+
+
 .. Note::
    Should the conda installer download fail. Please find links to alternative locations on the
    :doc:`../downloads` page.
-
-
-.. Admonition::
-   Should the conda installer download fail. Please find links to alternative locations on the
-   :doc:`../downloads` page.
-
-
-.. Tip::
-   #. Ask yourself what ``rm`` means in the above command. Why should you be careful when using this command?
-   #. The name ``Miniconda3-latest-Linux-x86_64.sh`` is quite long, will take you a while to type out, and you will br prone to making mistakes when typing it. What should you do instead of typing the full name?
 
     
 Update ``.bashrc`` and ``.zshrc`` config-files
@@ -105,6 +105,11 @@ We add the right path to the |conda| installation to our shell config files:
    Replace "manager" with your actual username.
    Find out with ``whoami``. (What does the ``whoami`` command do?)
    
+.. Tip::
+   #. Find out what ``echo`` means in the above command?
+   #. What does the ``>>`` do in the above command? (hint: google "redirect")
+   #. What is inside of the "shell configuration files"?
+   #. Why are the chell configuration files preceeded by a `.`? What effect does this have? (hint: google "hidden file") 
 
 So what is actually happening here? We are appending a line to a file (either ``.bashrc`` or ``.zshrc``).
 If we are starting a new command-line shell, either file gets executed first (depending on which shell you are using, either bash or zsh shells).
