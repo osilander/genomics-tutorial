@@ -103,17 +103,20 @@ We add the right path to the |conda| installation to our shell config files:
 .. Attention::
    The above assumes that your username is "manager", which is the default on a Biolinux install.
    Replace "manager" with your actual username.
-   Find out with ``whoami``.
+   Find out with ``whoami``. (What does the ``whoami`` command do?)
    
 
 So what is actually happening here? We are appending a line to a file (either ``.bashrc`` or ``.zshrc``).
 If we are starting a new command-line shell, either file gets executed first (depending on which shell you are using, either bash or zsh shells).
 What this line does, is to put permanently the directory ``~/miniconda3/bin`` first on your ``PATH`` variable.
-The ``PATH`` variable contains directories in which our computer looks for installed programs, one directory after the other until the program you requested is found (or not, then it will complain).
+
+The ``PATH`` variable contains directories in which our computer looks for installed programs, one directory after the other until the program you requested is found (or not, then it will complain). For example, you might have a ``PATH`` variable that says: first look in my home directory (``~/``), and then in the ``/usr/bin/`` directory, and then in my friend's directory (``friend_dir/sneaky_files_i_saved_there/``). However, those are *the only* places the computer will look. If we want the computer to look in more places, I have to add those locations to the ``PATH`` variable.
+
+
 Through the addition of the above line we make sure that the program ``conda`` can be found anytime we open a new shell.
 
 
-Close shell/terminal, **re-open** new shell/terminal.
+Now (finally), close the shell/terminal and open a **new** shell/terminal.
 Now, we should be able to use the |conda| command:
 
 
