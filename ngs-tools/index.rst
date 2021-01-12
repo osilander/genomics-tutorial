@@ -25,8 +25,8 @@ Preliminaries
   
 
 
-.. Attention::
-   One More Thing.
+.. One More Thing::
+   .
 
    Throughout this course we will be interacting with the computer via the command line. There is one fundamental aspect of using the command line that you **must never forget**. It is perhaps the single most powerful method available to save time. That method is...
    
@@ -35,6 +35,8 @@ Preliminaries
    
 
    `Tab-complete <https://en.wikipedia.org/wiki/Command-line_completion>`_ can be used to auto-complete commands, directory names, and file names. If you are not sure whether your file is named ``results_QC.txt`` or ``results_qc.txt`` then oin the command line you can simply type ``results`` *and then tab*, and the computer will auto-complete the name (assuming there is a file or directory or command that begins with ``results``).
+
+   If you type the first part of a file and then tab, and then find that it does not autocomplete *even though you know you have the correct file name*, then try pressing tab twice. This will give you a list of all 
 
 Install the conda package manager
 ---------------------------------
