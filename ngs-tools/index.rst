@@ -3,8 +3,9 @@
 Tool installation
 =================
 
-Install the conda package manager
+Preliminaries
 ---------------------------------
+
 
 .. Attention::
    Throughout this course you may see commands or files or directories that are named something like ``my_awesome_file.tab`` or ``my_home_directory`` or ``myresults.txt``. In these cases, you should replace these names with names that are **relevant to you**, or which are descriptive **for you**, or which contain **your** directory names. For example, if you are making a file that contains the results of a quality control analysis of DNA sequences from *E. coli*, you might name the file ``ecoli_qc_results.txt``.
@@ -15,8 +16,12 @@ Install the conda package manager
 
 
 .. Attention::
-   While we are the topic of `naming conventions <https://en.wikipedia.org/wiki/Naming_convention_(programming)>`_, there are certain characters that you should **always** avoid when naming files and folders. Besides spaces, these are (not necessarily exhaustive): `` : ; ` " ' \ / ! @ # $ % ^ & * ( ) + , ? [ ] { } | > <``. 
+   While we are the topic of `naming conventions <https://en.wikipedia.org/wiki/Naming_convention_(programming)>`_, there are certain characters that you should **always** avoid when naming files and folders. Besides spaces, these are (not necessarily exhaustive): : ; ` " ' \ / ! @ # $ % ^ & * ( ) + , ? [ ] { } | > <. 
   
+
+Install the conda package manager
+---------------------------------
+
 
 Software packages and tools are pieces of software that have been developed to perform specific jobs, or are used to implement specific methods. Your general view of a software package may be something like Excel or Chrome or TikTok. However, more fundamentally software is simply a group of instructions used to perform a specific task. In bioinformatics, for example, this could be a set of instructions telling the computer how to interpret and display the quality scores from a ``.fastq`` file.
 
