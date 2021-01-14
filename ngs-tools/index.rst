@@ -7,7 +7,7 @@ Preliminaries
 ---------------------------------
 
 
-Throughout this course you may see commands or files or directories that are named something like ``my_awesome_file.tab`` or ``my_home_directory`` or ``myresults.txt``. In these cases, you should replace these names with names that are **relevant to you**, or which are descriptive **for you**, or which contain **your** directory names. For example, if you are making a file that contains the results of a quality control analysis of DNA sequences from *E. coli*, you might name the file ``ecoli_qc_results.txt``.
+Note that throughout this course you may see commands or files or directories that are named something like ``my_awesome_file.tab`` or ``my_home_directory`` or ``myresults.txt``. When you see names like this in the instructions, *this does not mean that you should name your files or directories in this way*. Rather, you should replace these placeholder names with names that are **relevant to you**, or which are descriptive **for you**, or which contain **your** directory names. For example, if you are making a file that contains the results of a quality control analysis of DNA sequences from *E. coli*, you might name the file ``ecoli_qc_results.txt``.
 
 
 .. Attention::
@@ -58,7 +58,7 @@ Install the conda package manager
 ---------------------------------
 
 
-Software packages and tools are pieces of software that have been developed to perform specific jobs, or are used to implement specific methods. Your general view of a software package may be something like Excel or Chrome or TikTok. However, more fundamentally software is simply a group of instructions used to perform a specific task. In bioinformatics, for example, this could be a set of instructions telling the computer how to interpret and display the quality scores from a ``.fastq`` file.
+Software **packages** and tools are pieces of software that have been developed to perform specific jobs, or are used to implement specific methods. Your general view of a software package may be something like Excel or Chrome or TikTok. However, more fundamentally software is simply a group of instructions used to perform a specific task. In bioinformatics, for example, this could be a set of instructions telling the computer how to interpret and display the quality scores from a ``.fastq`` file.
 
 
 *However*, software packages and tools often have **dependencies**, which are other pieces of software or tools that are necessary to run the software you would like to install. For example, to use Instagram, you also need software that controls your phone's camera. This reliance of Instagram on camera-controlling software is known as a **dependency**. Importantly, software like Instagram is designed to be **user-friendly**, and during installation will usually check that such camera-controlling software exists, and if it does not, may try to install it.
@@ -66,7 +66,7 @@ Software packages and tools are pieces of software that have been developed to p
 However, bioinformatics software, much of which is written by inexperienced computer scientists (or worse, biologists) often does not check for dependencies. This can create signficant issues if you try to run a price of software but are missing dependencies (the other pieces of software that are also required).
 
 
-To make sure that we resolve all these dependency issues, we will use a package/tool managing system. This managing system is called |conda|, and it is perhaps the most common package manager used in bioinformatics (well, actually, *bioconda* is). |conda| is not installed by default, thus we need to install it first to be able to use it.
+To make sure that we resolve all these dependency issues, we will use a package/tool managing system. This managing system is called |conda|, and it is perhaps the most common package manager used in bioinformatics (well, actually, *bioconda* is). |conda| is not installed by default, thus you need to install it first to be able to use it.
 
 The installation of this tool is perhaps the most complicated installation we will do in this course. However, after the installation of |conda|, your life will become far easier and you will be on your way to becoming a seasoned bioinformatician (`binfie <https://soundcloud.com/microbinfie>`_).
 
@@ -104,7 +104,7 @@ The installation of this tool is perhaps the most complicated installation we wi
 Update ``.bashrc`` and ``.zshrc`` config-files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Before we are able to use |conda| we need to tell our shell where it can find the program.
+Before you are able to use |conda| you need to tell our shell where it can find the program.
 We add the right path to the |conda| installation to our shell config files:
 
 .. code::
@@ -119,23 +119,23 @@ We add the right path to the |conda| installation to our shell config files:
    Find out with ``whoami``. (What does the ``whoami`` command do?)
    
 .. Tip::
-   #. Find out what ``echo`` means in the above command?
+   #. What does ``echo`` mean in the above command?
    #. What does the ``>>`` do in the above command? (hint: google "redirect")
    #. What is inside of the "shell configuration files"?
-   #. Why are the chell configuration files preceeded by a `.`? What effect does this have? (hint: google "hidden file") 
+   #. Why are the shell configuration files preceeded by a ``.``? What effect does this have? (hint: google "hidden file") 
 
 So what is actually happening here? We are appending a line to a file (either ``.bashrc`` or ``.zshrc``).
-If we are starting a new command-line shell, either file gets executed first (depending on which shell you are using, either bash or zsh shells).
+If youare starting a new command-line shell, either file gets executed first (depending on which shell you are using, either bash or zsh shells).
 What this line does, is to put permanently the directory ``~/miniconda3/bin`` first on your ``PATH`` variable.
 
-The ``PATH`` variable contains directories in which our computer looks for installed programs, one directory after the other until the program you requested is found (or not, then it will complain). For example, you might have a ``PATH`` variable that says: first look in my home directory (``~/``), and then in the ``/usr/bin/`` directory, and then in my friend's directory (``friend_dir/sneaky_files_i_saved_there/``). However, those are *the only* places the computer will look. If we want the computer to look in more places, I have to add those locations to the ``PATH`` variable.
+The ``PATH`` variable contains directories in which our computer looks for installed programs, one directory after the other until the program you requested is found (or not, then it will complain). For example, you might have a ``PATH`` variable that says: first look in my home directory (``~/``), and then in the ``/usr/bin/`` directory, and then in my friend's directory (``friend_dir/sneaky_files_i_saved_there/``). However, those are *the only* places the computer will look. If youwant the computer to look in more places, you have to add those locations to the ``PATH`` variable.
 
 
-Through the addition of the above line we make sure that the program ``conda`` can be found anytime we open a new shell.
+Through the addition of the above line youmake sure that the program ``conda`` can be found anytime you open a new shell.
 
 
 Now (finally), close the shell/terminal and open a **new** shell/terminal.
-Now, we should be able to use the |conda| command:
+Now, you should be able to use the |conda| command:
 
 
 .. code-block:: bash
@@ -174,7 +174,7 @@ This is useful to work **reproducible** as we can easily re-create the tool-set 
     conda activate ngs
 
     
-So what is happening when you type ``conda activate ngs`` in a shell.
+So what is happening when you type ``conda activate ngs`` in a shell?
 The ``PATH`` variable (mentioned above) gets temporarily manipulated and set to:
 
 
@@ -186,20 +186,27 @@ The ``PATH`` variable (mentioned above) gets temporarily manipulated and set to:
    /home/manager/miniconda3/envs/ngs/bin:/home/manager/miniconda3/bin:/usr/local/bin: ...
 
 
-Now it will look first in your environment's bin directory but afterwards in the general conda bin (/home/manager/miniconda3/bin).
+The colons (``:``) in the above text indicate separations between the directory listings.
+
+Now it will look first in your environment's ``bin/`` directory but afterwards in the general conda ``bin/`` (``/home/manager/miniconda3/bin``).
 So basically everything you install generally with conda (without being in an environment) is also available to you but gets overshadowed if a similar program is in ``/home/manager/miniconda3/envs/ngs/bin`` and you are in the ``ngs`` environment.
+
+.. Tip::
+   Ask yourself: What are all these ``bin/`` directories, and why are they called "bin"?
 
 
 Install software
 ----------------
 
-To install software into the activated environment, one uses the command ``conda install``.
+To install software into the activated environment, use the command ``conda install``.
 
 .. code-block:: bash
          
     # install more tools into the environment
-    conda install package
+    conda install cool-new-package
 
+.. Tip::
+   do I *really* mean that you install all packages using the phrase "cool-new-package"?
 
 .. note::
    To tell if you are in the correct conda environment, look at the command-prompt.
