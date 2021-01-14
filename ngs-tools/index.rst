@@ -42,6 +42,8 @@ While we are the topic of `naming conventions <https://en.wikipedia.org/wiki/Nam
    And One More Thing
    Throughout this lab course, *google is your friend*. If you have errors, or if you are not sure how you might do something, or if you forget a command, google it!
 
+   Thus, **Step One** as you begin the lab is: Approach the command line with confidence and in a calm manner, assured that whatever goes wrong, you can google your way out of it.
+
    `It's <https://codeahoy.com/2016/04/30/do-experienced-programmers-use-google-frequently/>`_
 
    `what <https://www.reddit.com/r/programming/comments/3bwo68/how_much_does_an_experienced_programmer_use_google/>`_
@@ -76,11 +78,11 @@ The installation of this tool is perhaps the most complicated installation we wi
     # download latest conda installer
     curl -O https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
-``curl`` is a program that is used to transfer data to or from a server on the command line. Thus, this command is simply using this program to find the file at the location indicated. This file (with the extension ``.sh``) is a ``bash`` file, which is usually run using the command line program ``bash``.
+**Explanation**: ``curl`` is a program that is used to transfer data to or from a server on the command line. Thus, this command is simply using this program to find the file at the location indicated. This file (with the extension ``.sh``) is a ``bash`` file, which is usually run using the command line program ``bash``.
 
 
 .. Attention::
-   Noting the *extension* of a file can be very helpful in figuring out what is in it, or what it does. For example, you should never end a ``bash`` file with ``.txt`` as that suggests it is a simple text file, when in fact it is not. Similarly, you would never end a word file with ``.xlsx``, you would end it with ``.doc`` or ``.docx``
+   Noting the *extension* of a file can be very helpful in figuring out what is in it, or what it does. For example, you should never end a ``bash`` file with ``.txt`` as that suggests it is a simple text file, when in fact it is not. Similarly, you would never end a Microsoft Word file with ``.xlsx``, you would end it with ``.doc`` or ``.docx``
 
 .. code-block:: bash
 
@@ -121,21 +123,31 @@ We add the right path to the |conda| installation to our shell config files:
 .. Tip::
    #. What does ``echo`` mean in the above command?
    #. What does the ``>>`` do in the above command? (hint: google "redirect")
-   #. What is inside of the "shell configuration files"?
+   #. What is inside of the "shell config files" (e.g. ``.bashrc``)?
    #. Why are the shell configuration files preceeded by a ``.``? What effect does this have? (hint: google "hidden file") 
 
-So what is actually happening here? We are appending a line to a file (either ``.bashrc`` or ``.zshrc``).
-If youare starting a new command-line shell, either file gets executed first (depending on which shell you are using, either bash or zsh shells).
-What this line does, is to put permanently the directory ``~/miniconda3/bin`` first on your ``PATH`` variable.
+**Explanation**: So what is actually happening here? We are appending a line to a file (either ``.bashrc`` or ``.zshrc``).
+If you are starting a new command-line shell, either file gets executed first (depending on which shell you are using, either bash or zsh shells).
+What this line does is to put permanently the directory ``~/miniconda3/bin`` first on your ``PATH`` variable. **Why** is this needed? Read on:
 
-The ``PATH`` variable contains directories in which our computer looks for installed programs, one directory after the other until the program you requested is found (or not, then it will complain). For example, you might have a ``PATH`` variable that says: first look in my home directory (``~/``), and then in the ``/usr/bin/`` directory, and then in my friend's directory (``friend_dir/sneaky_files_i_saved_there/``). However, those are *the only* places the computer will look. If youwant the computer to look in more places, you have to add those locations to the ``PATH`` variable.
-
-
-Through the addition of the above line youmake sure that the program ``conda`` can be found anytime you open a new shell.
+The ``PATH`` variable contains places (directories) in which your computer looks for  programs. These directories are listed one after the other. The computer will search these in the order they are listed until the program you requested is found (or not, then it will complain). For example, you might have a ``PATH`` variable that says: first look in my home directory (``~/``), and then in the ``/usr/bin/`` directory, and then in my friend's directory (``friends_dir/sneaky_files_i_saved_there/``). However, those are *the only* places the computer will look. If youwant the computer to look in more places, you have to add those locations to the ``PATH`` variable.
 
 
-Now (finally), close the shell/terminal and open a **new** shell/terminal.
-Now, you should be able to use the |conda| command:
+Through the addition of the above line you have now told the computer to also look in ``/home/manager/miniconda3/bin`` so that the program ``conda`` can be found anytime you open a new shell.
+
+
+Finally, close the shell/terminal and open a **new** shell/terminal.
+Now, you should be able to use the |conda| command. One useful way to check that |conda| (*or any other command line program*) is to ask what the program does. This is **almost always** done by typing ``--help`` or ``-h`` after the command. For example:
+
+
+.. code-block:: bash
+
+    conda --help
+
+This will bring up a list of sub-commands that |conda| can do. Try it.
+
+
+Next, make sure you have the current version of |conda|:
 
 
 .. code-block:: bash
@@ -143,18 +155,16 @@ Now, you should be able to use the |conda| command:
     conda update conda
 
 
-Installing conda channels to make tools available
+Configure conda channels to make tools available
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Different tools are packaged in what |conda| calls channels.
-We need to add some channels to make the bioinformatics and genomics tools
-available for installation:
+The methods to install different tools are called recipes, and these are stored in what |conda| calls channels (as noted above). to make sure |conda| looks in the right places for these recipes, we need to tell it what channels to look in, and in wehat order to search them. This will make the bioinformatics and genomics tools easily find-able for installation:
 
 
 .. code-block:: bash
     
     # Install some conda channels
-    # A channel is where conda looks for packages
+    # A channel is where conda looks for recipes to install pakcages
     conda config --add channels defaults
     conda config --add channels bioconda 
     conda config --add channels conda-forge     
@@ -163,8 +173,7 @@ available for installation:
 Create environments
 -------------------
 
-We create a |conda| environment for some tools.
-This is useful to work **reproducible** as we can easily re-create the tool-set with the same version numbers later on.
+Now that we have a method to manage the installation of software packages (the |conda| *package manager*), there may be times that we want to have multiple different versions of a software tools installed (e.g. ``python 2.7`` and ``python 3.7``. In addition, there may be some software tools that *conflict* with other software tools. This creates a new problem for us. However, we can solve this by creating different |conda| environments. In these environments we can install only certain versions of a software tool, or only certain pieces of software.
 
 
 .. code-block:: bash
@@ -191,6 +200,8 @@ The colons (``:``) in the above text indicate separations between the directory 
 Now it will look first in your environment's ``bin/`` directory but afterwards in the general conda ``bin/`` (``/home/manager/miniconda3/bin``).
 So basically everything you install generally with conda (without being in an environment) is also available to you but gets overshadowed if a similar program is in ``/home/manager/miniconda3/envs/ngs/bin`` and you are in the ``ngs`` environment.
 
+The **huge** additional advantage of making separate |conda| environments in which you do your work is that it makes your work **reproducible**, as you can easily re-create the entire tool-set with exactly the same software versions numbers later on (e.g. years later, when the functionality of the current software version may have changed completely).
+
 .. Tip::
    Ask yourself: What are all these ``bin/`` directories, and why are they called "bin"?
 
@@ -206,7 +217,7 @@ To install software into the activated environment, use the command ``conda inst
     conda install cool-new-package
 
 .. Tip::
-   do I *really* mean that you install all packages using the phrase "cool-new-package"?
+   Does this instruction *really* mean that you install all packages using the phrase "cool-new-package"?
 
 .. note::
    To tell if you are in the correct conda environment, look at the command-prompt.
@@ -233,10 +244,10 @@ General conda commands
     conda env list
 
     # create new env
-    conda create -n [name] package [package] ...
+    conda create -n [environment-name] package [package] ...
 
     # activate env
-    conda activate [name]
+    conda activate [environment-name]
 
     # deavtivate env
     conda deactivate
