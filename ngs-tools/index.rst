@@ -66,7 +66,7 @@ Software **packages** and tools are pieces of software that have been developed 
 However, bioinformatics software, much of which is written by inexperienced computer scientists (or worse, biologists) often does not check for dependencies. This can create signficant issues if you try to run a price of software but are missing dependencies (the other pieces of software that are also required).
 
 
-To make sure that we resolve all these dependency issues, we will use a package/tool managing system. This managing system is called |conda|, and it is perhaps the most common package manager used in bioinformatics (well, actually, *bioconda* is). |conda| is not installed by default, thus you need to install it first to be able to use it.
+To make sure that we resolve all these dependency issues, we will use a package/tool managing system. This managing system is called |conda|, and it is perhaps the most common package manager used in bioinformatics. The process of installing a software package is called a *recipe*, and these recipes are contained in places called *channels*. Most recipes for bioinformatic software is contained in the `bioconda <https://bioconda.github.io/>`_ channel, which currently has reciupes for more than 7000 software packages). |conda| is not installed by default, thus you need to install it first to be able to use it.
 
 The installation of this tool is perhaps the most complicated installation we will do in this course. However, after the installation of |conda|, your life will become far easier and you will be on your way to becoming a seasoned bioinformatician (`binfie <https://soundcloud.com/microbinfie>`_).
 
