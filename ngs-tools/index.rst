@@ -62,12 +62,12 @@ Install the conda package manager
 ---------------------------------
 
 
-Software **packages** and tools are pieces of software that have been developed to perform specific jobs, or are used to implement specific methods. Your general view of a software package may be something like Excel or Chrome or TikTok. However, more fundamentally software is simply a group of instructions used to perform a specific task. In bioinformatics, for example, this could be a set of instructions telling the computer how to interpret and display the quality scores from a ``.fastq`` file.
+Software **packages** and tools are pieces of software that have been developed to perform specific jobs, or are used to implement specific methods. Your general view of a software package may be something like Excel or Chrome or TikTok. More fundamentally, software is simply a group of instructions used to perform a specific task. In bioinformatics, for example, this could be a set of instructions telling the computer how to interpret and display the quality scores from a ``.fastq`` file.
 
 
 *However*, software packages and tools often have **dependencies**, which are other pieces of software or tools that are necessary to run the software you would like to install. For example, to use Instagram, you also need software that controls your phone's camera. This reliance of Instagram on camera-controlling software is known as a **dependency**. Importantly, software like Instagram is designed to be **user-friendly**, and during installation will usually check that such camera-controlling software exists, and if it does not, may try to install it.
 
-However, bioinformatics software, much of which is written by inexperienced computer scientists (or worse, biologists) often does not check for dependencies. This can create signficant issues if you try to run a price of software but are missing dependencies (the other pieces of software that are also required).
+However, bioinformatics software, much of which is written by inexperienced computer scientists (or worse, biologists) often does not check for dependencies. This can create significant issues if you try to run a price of software but are missing dependencies (the other pieces of software that are also required).
 
 
 To make sure that we resolve all these dependency issues, we will use a package/tool managing system. This managing system is called |conda|, and it is perhaps the most common package manager used in bioinformatics. The process of installing a software package is called a *recipe*, and these recipes are contained in places called *channels*. Most recipes for bioinformatic software is contained in the `bioconda <https://bioconda.github.io/>`_ channel, which currently has reciupes for more than 7000 software packages). |conda| is not installed by default, thus you need to install it first to be able to use it.
