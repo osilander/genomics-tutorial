@@ -39,7 +39,9 @@ While we are the topic of `naming conventions <https://en.wikipedia.org/wiki/Nam
 
 .. Attention::
    
-   And One More Thing
+   And Yet One More Thing.
+
+
    Throughout this lab course, *google is your friend*. If you have errors, or if you are not sure how you might do something, or if you forget a command, google it!
 
    Thus, **Step One** as you begin the lab is: Approach the command line with confidence and in a calm manner, assured that whatever goes wrong, you can google your way out of it.
