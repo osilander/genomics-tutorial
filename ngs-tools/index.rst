@@ -205,7 +205,7 @@ So basically everything you install generally with conda (without being in an en
 The **huge** additional advantage of making separate |conda| environments in which you do your work is that it makes your work **reproducible**, as you can easily re-create the entire tool-set with exactly the same software versions numbers later on (e.g. years later, when the functionality of the current software version may have changed completely).
 
 .. Tip::
-   Ask yourself: What are all these ``bin/`` directories, and why are they called "bin"?
+   Extra-credit reading: `What are <https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard#Directory_structure>`_ all these ``bin/`` directories, and why are they called "bin"?
 
 
 Install software
