@@ -51,6 +51,7 @@ More information about other bioinformatics material and our past research can b
    :maxdepth: 2
 
    introduction
+   command-line/index
    ngs-tools/index
    ngs-qc/index
    ngs-assembly/index
